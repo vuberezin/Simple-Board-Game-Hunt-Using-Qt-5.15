@@ -16,7 +16,6 @@ Game::Game(QWidget *parent)
     for (size_t row = 0; row < rows; ++row) {
         for (size_t col = 0; col < cols; ++col) {
             QPushButton *btn = new QPushButton();
-            btn->setStyleSheet("background-color:");
             btn->setText(" ");
             //btn->setProperty("cell", true);
             btn->setStyleSheet("font: 50px \"Verdana\";"
