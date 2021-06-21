@@ -1,4 +1,4 @@
-# Simple game "Catch-NULL" created using Qt-5.15 for learning Qt and C++
+# Simple game "The Hunt" created using Qt-5.15 for learning Qt and C++
 
 Rules:
 1) The pieces of the First player can only move upward and from the two upper cells diagonally
