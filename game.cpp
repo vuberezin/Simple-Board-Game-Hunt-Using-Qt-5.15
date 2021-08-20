@@ -72,7 +72,8 @@ Game::Game(QWidget *parent)
                                  "max-width: 100px;"
                                  "color: red;"
                                  "background-color: lightGray" );
-
+        
+    it[i].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
 
     } else if(i == 7) {
         
@@ -83,20 +84,12 @@ Game::Game(QWidget *parent)
                                  "max-width: 100px;"
                                  "color: blue;"
                                  "background-color: lightGray" );
+        
+   it[i].cellBtn->setText((QString)static_cast<char>(BoardMarks::O));
+        
     }
-
-}
+    }
     
-    
-//--------------------------------------------------------------------------------------------    
-    it[9].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-
-    it[11].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-
-    it[13].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-
-    it[7].cellBtn->setText((QString)static_cast<char>(BoardMarks::O));
-
 }
 
 
