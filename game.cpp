@@ -104,12 +104,15 @@ void Game::updateGame(Cell &cell)
     auto it = cells.begin();
 
     if(cell.cellBtn->text() == "X" & okX == true){
+        
         cell.cellBtn->setText(" ");
         int i = cell.pl;
-        //it[i].pl = 0;
         okX = false;
-       }
+        
+    }
+    
     else if (cell.cellBtn->text() == " " & okX == false){
+        
         cell.cellBtn->setText("X");
         cell.cellBtn->setStyleSheet("font: 50px \"Verdana\";"
                                     "min-height: 100px;"
@@ -119,19 +122,20 @@ void Game::updateGame(Cell &cell)
                                     "color: red;"
                                     "background-color: lightGray" );
         int i = cell.pl;
-
-        //it[i].pl = 100;
         okX = true;
         Game::finishGame();
     }
 
     if(cell.cellBtn->text() == "O" & okO == true){
+        
         cell.cellBtn->setText(" ");
         int i = cell.pl;
-        //it[i].pl = 0;
         okO = false;
-       }
+        
+    }
+    
     else if (cell.cellBtn->text() == " " & okO == false ){
+        
         cell.cellBtn->setText("O");
         cell.cellBtn->setStyleSheet("font: 50px \"Verdana\";"
                                     "min-height: 100px;"
@@ -141,13 +145,12 @@ void Game::updateGame(Cell &cell)
                                     "color: blue;"
                                     "background-color: lightGray" );
         int i = cell.pl;
-        //it[i].pl = 200;
-
         okO = true;
         Game::finishGame();
     }
+    
     for(int i = 0; i < 14; ++i ){
-     qDebug() << "Cell number = " << it[i].pl ;
+        qDebug() << "Cell number = " << it[i].pl ;
     }
 
 
@@ -206,6 +209,7 @@ void Game::finishGame(){
 }
 
 void Game::messageBox(QString str){
+    
     QMessageBox msgBox;
     msgBox.setText(str);
     msgBox.setStyleSheet("QLabel{min-width: 200px;}");
