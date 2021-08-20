@@ -39,137 +39,66 @@ Game::Game(QWidget *parent)
 
 
  void Game::startGame(){
-     auto it = cells.begin();
-     it[0].cellBtn->setEnabled(false);
-     it[0].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: transparent");
 
-     it[1].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
+    auto it = cells.begin();
+    for(int i = 0; i < cells.size();  i++){
 
-     it[2].cellBtn->setEnabled(false);
-     it[2].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: transparent");
+    if(i == 0 || i == 2 || i == 12 || i == 14){
 
+    it[i].cellBtn->setEnabled(false);
+    it[i].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
+                                 "min-height: 100px;"
+                                 "max-height: 100px;"
+                                 "min-width: 100px;"
+                                 "max-width: 100px;"
+                                 "background-color: transparent");
 
-     it[3].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
+    } else {
 
-     it[4].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
+    it[i].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
+                                 "min-height: 100px;"
+                                 "max-height: 100px;"
+                                 "min-width: 100px;"
+                                 "max-width: 100px;"
+                                 "background-color: lightGray");
+    }
 
-     it[5].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
-
-     it[6].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
-
-     it[7].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "color: blue;"
-                                  "background-color: /*lightGray*/");
-
-     it[8].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
-
-     it[9].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "color: red;"
-                                  "background-color: /*lightGray*/");
-
-     it[10].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: /*lightGray*/");
-
-     it[11].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "color: red;"
-                                  "background-color: /*lightGray*/");
-
-     it[12].cellBtn->setEnabled(false);
-     it[12].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: transparent");
-
-     it[13].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "color: red;"
-                                  "background-color: /*lightGray*/");
+    if(i == 9 || i == 11 || i == 13){
+        
+    it[i].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
+                                 "min-height: 100px;"
+                                 "max-height: 100px;"
+                                 "min-width: 100px;"
+                                 "max-width: 100px;"
+                                 "color: red;"
+                                 "background-color: lightGray" );
 
 
-     it[14].cellBtn->setEnabled(false);
-     it[14].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
-                                  "min-height: 100px;"
-                                  "max-height: 100px;"
-                                  "min-width: 100px;"
-                                  "max-width: 100px;"
-                                  "background-color: transparent");
+    } else if(i == 7) {
+        
+    it[i].cellBtn->setStyleSheet("font: 50px \"Verdana\";"
+                                 "min-height: 100px;"
+                                 "max-height: 100px;"
+                                 "min-width: 100px;"
+                                 "max-width: 100px;"
+                                 "color: blue;"
+                                 "background-color: lightGray" );
+    }
 
- //--------------------------------------------------------------------------------------------
+}
+    
+    
+//--------------------------------------------------------------------------------------------    
+    it[9].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
 
-      it[9].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-      //it[9].pl = 100;
+    it[11].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
 
-      it[11].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-      //it[11].pl = 100;
+    it[13].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
 
-      it[13].cellBtn->setText((QString)static_cast<char>(BoardMarks::X));
-      //it[13].pl = 100;
+    it[7].cellBtn->setText((QString)static_cast<char>(BoardMarks::O));
 
-      it[7].cellBtn->setText((QString)static_cast<char>(BoardMarks::O));
-      //it[7].pl = 200;
+}
 
- }
 
 void Game::setConnection(){
 
@@ -195,7 +124,7 @@ void Game::updateGame(Cell &cell)
                                     "min-width: 100px;"
                                     "max-width: 100px;"
                                     "color: red;"
-                                    "background-color: " );
+                                    "background-color: lightGray" );
         int i = cell.pl;
 
         //it[i].pl = 100;
@@ -217,7 +146,7 @@ void Game::updateGame(Cell &cell)
                                     "min-width: 100px;"
                                     "max-width: 100px;"
                                     "color: blue;"
-                                    "background-color: " );
+                                    "background-color: lightGray" );
         int i = cell.pl;
         //it[i].pl = 200;
 
