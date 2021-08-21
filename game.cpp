@@ -157,9 +157,9 @@ void Game::updateGame(Cell &cell)
 }
 
 void Game::finishGame(){
+    
     auto it = cells.begin();
-
-        if (it[3].cellBtn->text() == "X" & it[4].cellBtn->text() == "X" & it[5].cellBtn->text() == "X"
+    if (it[3].cellBtn->text() == "X" & it[4].cellBtn->text() == "X" & it[5].cellBtn->text() == "X"
                 & it[1].cellBtn->text() == "O"){
             messageBox("Player X wins!");
         }
@@ -174,14 +174,8 @@ void Game::finishGame(){
             messageBox("Player X wins!");
         }
 
-
         else if(it[6].cellBtn->text() == "X" & it[10].cellBtn->text() == "X"
                 & it[9].cellBtn->text() == "O"){
-            messageBox("Player X wins!");
-        }
-
-        else if(it[8].cellBtn->text() == "X" & it[10].cellBtn->text() == "X"
-                & it[11].cellBtn->text() == "O"){
             messageBox("Player X wins!");
         }
 
@@ -200,11 +194,9 @@ void Game::finishGame(){
             messageBox("Player X wins!");
         }
 
- //--------------------------------------------------------------------------------------------
-
         else if(searchMaximum("X") < searchMaximum("O")){
             messageBox("Player O wins!");
-        }
+        }        
 
 }
 
@@ -220,7 +212,6 @@ void Game::messageBox(QString str){
 int Game::searchMaximum(QString str){
 
     auto it = cells.begin();
-
     if(str == "O"){
     for(int i = cells.size()-1; i > 0; i--){
     if(it[i].cellBtn->text() == str){
@@ -243,7 +234,6 @@ int Game::searchMaximum(QString str){
         }
 
         return ( max > min) ? max : min;
-
     }
 
 }
