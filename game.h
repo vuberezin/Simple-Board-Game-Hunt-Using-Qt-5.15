@@ -28,8 +28,8 @@ public:
   int min;
 
   enum class BoardMarks :  char { Empty = ' ',
-                                   X     = 'X',
-                                   O     = 'O'  };
+                                   X    = 'X',
+                                   O    = 'O'  };
 
 
    struct Cell {
@@ -48,6 +48,8 @@ public:
    void setConnection();
    int searchMaximum(QString str);
    void messageBox(QString str);
+   bool checkThree(int x1, int x2, int x4);
+   bool checkFour(int x1, int x2, int x3, int x4);
    void finishGame();
 
 public slots:
