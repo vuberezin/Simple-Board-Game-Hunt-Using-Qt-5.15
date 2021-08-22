@@ -194,50 +194,19 @@ void Game::messageBox(QString str){
 
 bool Game::checkFour(int x1, int x2, int x3, int x4){
 
-    bool b1 = false, b2 = false, b3 = false, b4 = false;
     auto it = cells.begin();
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x1 & it[i].cellBtn->text() == "X" )
-            b1 = true;
-    }
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x2 & it[i].cellBtn->text() == "X" )
-            b2 = true;
-    }
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x3 & it[i].cellBtn->text() == "X" )
-            b3 = true;
-    }
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x4 & it[i].cellBtn->text() == "O" )
-            b4 = true;
-    }
-
-    if(b1 & b2 & b3 & b4) return true;
-        else return false;
+    if(( it[x1].cellBtn->text() == "X" ) & (it[x2].cellBtn->text() == "X" ) &
+        (it[x3].cellBtn->text() == "X" ) & (it[x4].cellBtn->text() == "O" ))
+            return true;
 
 }
 
 bool Game::checkThree(int x1, int x2,  int x3){
 
-    bool b1 = false, b2 = false, b3 = false;
     auto it = cells.begin();
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x1 & it[i].cellBtn->text() == "X" )
-            b1 = true;
-    }
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x2 & it[i].cellBtn->text() == "X" )
-            b2 = true;
-    }
-
-    for(int i = 0; i < cells.size();  i++){
-        if(i == x3 & it[i].cellBtn->text() == "O" )
-            b3 = true;
-    }
-
-    if(b1 & b2 & b3 ) return true;
-        else return false;
+    if(( it[x1].cellBtn->text() == "X" ) & (it[x2].cellBtn->text() == "X" ) &
+        (it[x3].cellBtn->text() == "O" ))
+            return true;
 
 }
 
