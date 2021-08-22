@@ -28,17 +28,17 @@ public:
   int min;
 
   enum class BoardMarks :  char { Empty = ' ',
-                                   X    = 'X',
-                                   O    = 'O'  };
+                                  X     = 'X',
+                                  O     = 'O' };
 
 
    struct Cell {
-       QPushButton *cellBtn = nullptr;
-       int row ;
-       int col ;
-       int pl;
-       Cell(QPushButton *cellBtn, int row, int col, int pl_ )
-            : cellBtn(cellBtn), row(row), col(col), pl(pl_) {}
+      QPushButton *cellBtn = nullptr;
+      int row ;
+      int col ;
+      int pl;
+      Cell(QPushButton *cellBtn, int row, int col, int pl )
+            : cellBtn(cellBtn), row(row), col(col), pl(pl) {}
     };
 
 
@@ -48,7 +48,7 @@ public:
    void setConnection();
    int searchMaximum(QString str);
    void messageBox(QString str);
-   bool checkThree(int x1, int x2, int x4);
+   bool checkThree(int x1, int x2, int x3);
    bool checkFour(int x1, int x2, int x3, int x4);
    void finishGame();
 
